@@ -1,0 +1,22 @@
+<button (click)="getAllData()">GET ALL DATA</button>
+<button (click)="getSpecialUser()">GET SPECIAL DATA</button>
+
+<div class="container-fluid">
+    <table border="1">
+        <thead *ngIf="displayTable">
+            <th>Userid</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Body</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let arr of data">
+                <td>{{arr.userId}}</td>
+                <td>{{arr.id}}</td>
+                <td>{{arr.title}}</td>
+                <td>{{arr.body}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
